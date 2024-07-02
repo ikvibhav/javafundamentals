@@ -1,5 +1,3 @@
-package quiz;
-
 import edu.duke.*;
 import java.io.File;
 
@@ -68,7 +66,8 @@ public class PerimeterAssignmentRunner {
         for (File f : dr.selectedFiles()) {
             FileResource fr = new FileResource(f);
             Shape s = new Shape(fr);
-            double currPerimeter = this.getPerimeter(s);
+            // The use of this is optional here but I like to use it to make the code more readable
+            double currPerimeter = this.getPerimeter(s); 
             if (currPerimeter > largestPerimeter){
                 largestPerimeter = currPerimeter;
             }
@@ -84,9 +83,11 @@ public class PerimeterAssignmentRunner {
         for (File f : dr.selectedFiles()) {
             FileResource fr = new FileResource(f);
             Shape s = new Shape(fr);
+            // The use of this is optional here but I like to use it to make the code more readable
             double currPerimeter = this.getPerimeter(s);
             if (currPerimeter > largestPerimeter){
                 temp = f;
+                largestPerimeter = currPerimeter;
             }
         }
         return temp.getName();
