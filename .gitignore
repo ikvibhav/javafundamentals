@@ -1,2 +1,8 @@
 *.class
 *.zip
+*.fa
+*.bluej
+
+out
+dna
+
